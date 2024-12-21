@@ -1,0 +1,2 @@
+geospatial_interfaces/Geometry geometry
+geospatial_interfaces/Propertie[] properties
