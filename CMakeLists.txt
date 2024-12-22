@@ -17,12 +17,14 @@ find_package(sensor_msgs REQUIRED)
 
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/GeoJson.msg"
-  "msg/GeoTiff.msg"
   "msg/Cordinate.msg"
   "msg/Cordinates.msg"
   "msg/Geometry.msg"
   "msg/Feature.msg"
   "msg/Propertie.msg"
+  "msg/GeoTiff.msg"
+  "msg/Band.msg"
+  "msg/Grid.msg"
   DEPENDENCIES nav_msgs std_msgs geometry_msgs sensor_msgs
 )
 

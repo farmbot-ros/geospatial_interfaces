@@ -1,5 +1,6 @@
 std_msgs/Header header
 
-geospatial_interfaces/Feature[] collection
 string projection
-sensor_msgs/NavSatFix datum
+geometry_msgs/Pose origin
+int32 num_features
+geospatial_interfaces/Feature[] features
