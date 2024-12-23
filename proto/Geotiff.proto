@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "std_msgs/Header.proto";
+import "geometry_msgs/Pose.proto";
+import "geospatial_interfaces/Band.proto";
+
+message GeoTiff {
+    std_msgs.Header header = 1;
+    string projection = 2;
+    geometry_msgs.Pose origin = 3;
+    int32 num_bands = 4;
+    repeated geospatial_interfaces.Band bands = 5;
+}

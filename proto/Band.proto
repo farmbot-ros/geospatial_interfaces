@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package geospatial_interfaces;
+
+import "geospatial_interfaces/Grid.proto";
+import "geospatial_interfaces/Propertie.proto";
+
+message Band {
+    repeated Grid grid = 1;
+    repeated Propertie properties = 2;
+    repeated int32 data = 3;
+}

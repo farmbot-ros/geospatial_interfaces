@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+
+// unrestricted geojson // todo, restrict it
+
+message FeatureCollection {
+    repeated Feature features = 1;
+}
+
+message Feature {
+    string type = 1;
+    map<string, string> properties = 2;
+    Geometry geometry = 3;
+}
+
+message Geometry {
+    string type = 1;
+    repeated double coordinates = 2;
+}
+
+

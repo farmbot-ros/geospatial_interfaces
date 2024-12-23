@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+message Header {
+    string robotId = 1;    
+}
+
+message ZoneClaim {    // sub datatype of MultiZoneClaim, not sendable on its own
+    string zoneId = 2;
+    int32 timeStart = 3; // time in ms from now
+    int32 timeEnd = 4;  // time in ms from now
+}
+
+message MultiZoneClaim {
+    Header header = 1;
+    repeated ZoneClaim zoneClaims = 2;
+}
+
+message MapShareRequest {
+    Header header = 1;    
+}
+
+message MapShareResponse {
+    Header header = 1;
+    int32 lastUpdatedTime = 2; 
+    FeatureCollection featureCollection = 3;
+    MultiZoneClaim multiZoneClaim = 4;
+}
